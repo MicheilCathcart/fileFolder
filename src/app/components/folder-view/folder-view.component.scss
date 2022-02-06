@@ -1,8 +1,21 @@
 :host {
     .folder-view-wrap {
         display: flex;
-        img {
-            
+        padding: 10px;
+        width: 300px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid transparent;
+        &:hover {
+            border: 1px solid black;
+        }
+        .folder-name {
+            display: flex;
+            align-items: center;
+        }
+        button {
+            padding: 4px 10px;
+            margin-left: 5px;
         }
     }
 }

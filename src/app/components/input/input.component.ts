@@ -23,7 +23,9 @@ export class InputComponent {
   addNode() {
     let folder = new FolderModel();
     folder.name = this.name;
-    this.nodesService.addNode(new FolderModel());
+    console.log(this.name);
+    this.nodesService.addNode(folder);
+    this.onCancel();
   }
 
   onCancel() {

@@ -1,11 +1,19 @@
 :host {
     .folder-input-wrap {
-        width: 271px;
         display: flex;
+        width: 300px;
         align-items: center;
         align-content: center;
-        padding: 7px;
+        padding: 10px 15px;
         border: 1px solid black;
         margin-top: 15px;
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
     }
 }

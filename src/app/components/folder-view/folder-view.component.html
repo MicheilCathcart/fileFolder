@@ -1,6 +1,10 @@
 <div class="folder-view-wrap">
-    <img class="folder-icon" alt="folder" src="/assets/folder-open-regular.svg" />
-    {{ folder.name }}
-    <button class="black-button" (click)="addChild()"><img alt="Create Folder" src="/assets/tick.svg" /></button>
-    <button class="black-button" (click)="delete()"><img alt="Cancel" src="/assets/cross.svg" /></button>
+    <div class="folder-name">
+        <img class="folder-icon" alt="folder" src="/assets/folder-open-regular.svg" />
+        {{ folder.name }}
+    </div>
+    <div class="hover-buttons">
+        <button class="black-button" (click)="addChild()">+</button>
+        <button class="black-button" (click)="delete()">X</button>
+    </div>
 </div>
