@@ -1,10 +1,11 @@
 <div class="folder-view-wrap">
     <div class="folder-name">
-        <img class="folder-icon" alt="folder" src="/assets/folder-open-regular.svg" />
+        <img class="icon" alt="folder" src="/assets/folder-open-regular.svg" />
         {{ folder.name }}
     </div>
     <div class="hover-buttons">
-        <button class="black-button" (click)="addChild()">+</button>
+        <button class="black-button" (click)="showInputSelector = true">+</button>
         <button class="black-button" (click)="delete()">X</button>
     </div>
 </div>
+<app-input-selector *ngIf="showInputSelector" [parent]="folder" (close)="showInputSelector = false"></app-input-selector>

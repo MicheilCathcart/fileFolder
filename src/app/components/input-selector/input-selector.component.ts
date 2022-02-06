@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NodeModel, NodeType } from 'src/app/models/node.model';
 
 @Component({
   selector: 'app-input-selector',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputSelectorComponent implements OnInit {
 
+  @Input()
+  parent!: NodeModel;
+
+  @Output() 
+  close = new EventEmitter<boolean>();
+
+  type!: NodeType;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get nodeType() {
+    return NodeType;
+  }
+
+  showFolderInput() {
+    this.type = this.nodeType.Folder;
+  }
+
+  showFileInput() {
+    this.type = this.nodeType.File;
   }
 
 }

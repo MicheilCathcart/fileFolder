@@ -1,1 +1,7 @@
-<p>input-selector works!</p>
+<div class="input-selector-wrap">
+    <div *ngIf="!type" class="type-option">
+        <button class="white-button" (click)="showFolderInput()">File</button>
+        <button class="white-button" (click)="showFileInput()">Folder</button>
+    </div>
+    <app-input *ngIf="type" [parent]="parent" [type]="type"></app-input>
+</div>

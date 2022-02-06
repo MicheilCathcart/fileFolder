@@ -1,6 +1,9 @@
-<div class="folder-input-wrap">
-    <img class="folder-icon" alt="folder" src="/assets/folder-open-regular.svg" />
-    <input [(ngModel)]="name" type="text" [attr.aria-label]="type + ' ' + name"/>
-    <button class="black-button" (click)="addNode()"><img alt="Create + ' ' + name" src="/assets/tick.svg" /></button>
+<div class="input-wrap">
+
+    <img *ngIf="type === nodeType.Folder" class="icon" alt="folder" src="/assets/folder-open-regular.svg" />
+    <img *ngIf="type === nodeType.File" class="icon" alt="folder" src="/assets/file-regular.svg" />
+
+    <input [(ngModel)]="name" type="text" [attr.aria-label]="type + ' name'"/>
+    <button class="black-button" (click)="addNode()"><img alt="Create + ' name'" src="/assets/tick.svg" /></button>
     <button class="white-button" (click)="onCancel()"><img alt="Cancel" src="/assets/cross.svg" /></button>
 </div>  

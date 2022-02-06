@@ -12,6 +12,8 @@ export class FolderViewComponent implements OnInit {
   @Input()
   folder!: NodeModel;
 
+  showInputSelector: boolean = false;
+
   constructor(private nodeService: NodesService) { }
 
   ngOnInit(): void {

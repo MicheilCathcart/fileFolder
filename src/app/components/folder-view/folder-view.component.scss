@@ -6,8 +6,15 @@
         align-items: center;
         justify-content: space-between;
         border: 1px solid transparent;
+        cursor: pointer;
+        .hover-buttons {
+            display: none;
+        }
         &:hover {
             border: 1px solid black;
+            .hover-buttons {
+                display: block;
+            }
         }
         .folder-name {
             display: flex;
