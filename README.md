@@ -24,3 +24,5 @@ I have borrowed a create GUID function and a function that removes the parent pr
 1. Tidy up common CSS elements
 1. Make it responsive
 1. Improve icons to be more in line with the actions
+1. Write unit tests for the node service
+1. Write E2E tests
