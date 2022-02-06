@@ -20,7 +20,6 @@ I have borrowed a create GUID function and a function that removes the parent pr
 
 ## Gaps in the application
 
-1. I need to tidy up the CSS to make it more aethitically pleasing.
 1. More feedback given to the user when focussing on inputs.
 
 ## Improvements that could be made
