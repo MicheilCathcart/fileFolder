@@ -9,8 +9,8 @@
                 {{ folder.name }}
             </div>
             <div class="hover-buttons">
-                <button class="black-button small" (click)="showInputSelector = true"><img alt="Cancel" src="/assets/add.svg" /></button>
-                <button class="white-button small" (click)="delete()"><img alt="Cancel" src="/assets/cross.svg" /></button>
+                <button class="black-button small" title="Add file or folder"  aria-label="Add file or folder" (click)="showInputSelector = true"><img alt="Cancel" src="/assets/add.svg" /></button>
+                <button class="white-button small"  title="Delete folder"  aria-label="Delete folder" (click)="delete()"><img alt="Cancel" src="/assets/cross.svg" /></button>
             </div>
         </div>
     </div>

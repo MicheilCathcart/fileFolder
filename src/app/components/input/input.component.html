@@ -4,6 +4,6 @@
     <img *ngIf="type === nodeType.File" class="icon" alt="folder" src="/assets/file-regular.svg" />
 
     <input [(ngModel)]="name" type="text" [attr.aria-label]="type + ' name'"/>
-    <button class="black-button small" (click)="addNode()"><img alt="Create + ' name'" src="/assets/tick.svg" /></button>
-    <button class="white-button small" (click)="onCancel()"><img alt="Cancel" src="/assets/cross.svg" /></button>
+    <button class="black-button small" title="Accept Name"  aria-label="Accept Name" (click)="addNode()"><img alt="Create + ' name'" src="/assets/tick.svg" /></button>
+    <button class="white-button small" title="Cancel"  aria-label="Cancel" (click)="onCancel()"><img alt="Cancel" src="/assets/cross.svg" /></button>
 </div>

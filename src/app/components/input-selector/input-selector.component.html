@@ -1,7 +1,7 @@
 <div class="input-selector-wrap">
     <div *ngIf="!type" class="type-option">
-        <button class="white-button" (click)="showFolderInput()">Folder</button>
-        <button class="white-button" (click)="showFileInput()">File</button>
+        <button title="Enter Folder Name"  aria-label="Enter Folder Name" class="white-button" (click)="showFolderInput()">Folder</button>
+        <button title="Enter File Name"  aria-label="Enter File Name" class="white-button" (click)="showFileInput()">File</button>
     </div>
     <app-input *ngIf="type" [parent]="parent" [type]="type" (cancel)="onClose()"></app-input>
 </div>
