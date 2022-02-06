@@ -1,7 +1,10 @@
 :host {
     .input-selector-wrap {
+        padding-left: 10px;
+        border-left: 1px solid grey;
+        margin-left: 27px;
         .type-option {
-            margin-top: 10px;
+            padding-top: 10px;
         }
         button {
             width: 66px;

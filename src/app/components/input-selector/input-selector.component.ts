@@ -25,12 +25,16 @@ export class InputSelectorComponent implements OnInit {
     return NodeType;
   }
 
+  showFileInput() {
+    this.type = this.nodeType.File;
+  }
+
   showFolderInput() {
     this.type = this.nodeType.Folder;
   }
 
-  showFileInput() {
-    this.type = this.nodeType.File;
+  onClose() {
+    this.close.emit(false);
   }
 
 }

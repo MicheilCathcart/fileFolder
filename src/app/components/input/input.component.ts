@@ -50,6 +50,8 @@ export class InputComponent {
       this.nodesService.addNode(file);
     }
 
+    this.name = '';
+
     this.onCancel();
   }
 

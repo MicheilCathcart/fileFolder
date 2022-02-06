@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { FolderModel } from '../models/folder.model';
 import { NodeModel } from '../models/node.model';
 
 @Injectable({
@@ -12,9 +11,8 @@ export class NodesService {
   constructor() { }
 
   /**
-   * Removes a node and it's children when deleted
-   * @param parent the nodes parent, 
-   * @param childId 
+   * Remove a node and all its children
+   * @param node the node to remove 
    */
    removeNode(node: NodeModel) {
 
@@ -31,9 +29,8 @@ export class NodesService {
   }
 
   /**
-   * Removes a node and it's children when deleted
-   * @param parent the nodes parent, 
-   * @param childId 
+   * Add a node under it's parent
+   * @param node the node to add, 
    */
    addNode<T extends NodeModel>(node: T) {
 

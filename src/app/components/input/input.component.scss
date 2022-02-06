@@ -1,19 +1,13 @@
 :host {
     .input-wrap {
         display: flex;
-        width: 300px;
+        width: 268px;
         align-items: center;
         align-content: center;
         padding: 10px 15px;
         border: 1px solid black;
-        margin-top: 15px;
         button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            margin-left: 10px;
+            margin-right: 5px;
         }
     }
 }

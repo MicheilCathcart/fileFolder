@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NodeType } from './models/node.model';
 import { NodesService } from './services/nodes.service';
+import { getCircularReplacer } from './shared/get-circular-replacer';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +19,20 @@ export class AppComponent {
     return this.nodesService.nodes;
   }
 
+  get nodesTOJSON() {
+
+    // Stringify to remove parent circular reference
+    let stringified = JSON.stringify(this.nodesService.nodes, getCircularReplacer());
+    let parsed = JSON.parse(stringified);
+    return parsed;
+  }
+
   get nodeType() {
     return NodeType;
   }
   
 }
+
+
+
+

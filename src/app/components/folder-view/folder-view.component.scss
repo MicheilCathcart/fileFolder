@@ -1,28 +1,46 @@
 :host {
-    .folder-view-wrap {
-        display: flex;
-        padding: 10px;
-        width: 300px;
-        align-items: center;
-        justify-content: space-between;
-        border: 1px solid transparent;
-        cursor: pointer;
-        .hover-buttons {
-            display: none;
-        }
-        &:hover {
-            border: 1px solid black;
-            .hover-buttons {
-                display: block;
-            }
-        }
-        .folder-name {
+    .folder-group {
+        .tree-branch-wrap {
             display: flex;
             align-items: center;
         }
-        button {
-            padding: 4px 10px;
-            margin-left: 5px;
+        .tree-branch {
+            width: 8px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            .tree-branch-inner {
+                border-bottom: 1px solid grey;
+                width: 100%;
+            }
+        }
+        .folder-view-wrap {
+            display: flex;
+            padding: 10px;
+            height: 20px;
+            width: 300px;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid transparent;
+            cursor: pointer;
+            .hover-buttons {
+                display: none;
+            }
+            &:hover {
+                border: 1px solid black;
+                .hover-buttons {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .folder-name {
+                display: flex;
+                align-items: center;
+            }
+            button {
+                padding: 4px 10px;
+                margin-left: 5px;
+            }
         }
     }
 }

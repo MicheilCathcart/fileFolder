@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FolderModel } from 'src/app/models/folder.model';
 import { NodeModel } from 'src/app/models/node.model';
-import { NodesService } from 'src/app/services/nodes.service';
 
 @Component({
   selector: 'app-tree',

@@ -7,9 +7,9 @@ export enum NodeType {
 }
 
 export class NodeModel {
+    id: string = createGuid();
     type!: NodeType | null;
     name?: string;
     children: NodeModel[] = [];
-    id: string = createGuid();
     parent?: NodeModel;
 }

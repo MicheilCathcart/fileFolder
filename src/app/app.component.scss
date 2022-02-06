@@ -11,5 +11,12 @@
             padding: 10px;
             margin-bottom: 15px;
         }
+        :ng-deep {
+            > .tree {
+                padding-left: 0px;
+                border-left: 0px solid grey;
+                margin-left: 0px;
+            }
+        }
     }
 }

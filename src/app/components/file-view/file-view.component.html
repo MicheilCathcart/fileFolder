@@ -1,1 +1,14 @@
-<p>file-view works!</p>
+<div class="tree-branch-wrap">
+    <div class="tree-branch">
+        <div class="tree-branch-inner"></div>
+    </div>
+    <div class="file-view-wrap">
+        <div class="file-name">
+            <img class="icon" alt="folder" src="/assets/file-regular.svg" />
+            {{ file.name }}
+        </div>
+        <div class="hover-buttons">
+            <button class="white-button small" (click)="delete()"><img alt="Cancel" src="/assets/cross.svg" /></button>
+        </div>
+    </div>
+</div>
