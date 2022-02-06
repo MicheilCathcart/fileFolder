@@ -18,8 +18,9 @@ I could not build the application `ng build` at this point due to an issue with 
 
 I have borrowed a create GUID function and a function that removes the parent property on the NodeModel when exporting to JSON, this is so the JSON can render for display and not fail due to circular dependecies.
 
-## Gaps in the application
-
-1. More feedback given to the user when focussing on inputs.
-
 ## Improvements that could be made
+
+1. More feedback should be given to the user when focussing on inputs.
+1. Tidy up common CSS elements
+1. Make it responsive
+1. Improve icons to be more in line with the actions
