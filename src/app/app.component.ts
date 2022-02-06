@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NodeType } from './models/node.model';
 import { NodesService } from './services/nodes.service';
 
 @Component({
@@ -8,18 +9,17 @@ import { NodesService } from './services/nodes.service';
 })
 export class AppComponent {
 
-  title = 'fileFolder';
+  showFolderInput: boolean = false;
 
   constructor(private nodesService: NodesService) {
-    
   }
 
   get nodes() {
     return this.nodesService.nodes;
   }
 
-  addRootFolder() {
-    this.nodesService.addRootFolder();
+  get nodeType() {
+    return NodeType;
   }
-
+  
 }

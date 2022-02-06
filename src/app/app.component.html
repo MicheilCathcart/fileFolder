@@ -1,5 +1,6 @@
-<div class="tree">
-  <button class="black-button root-button" (click)="addRootFolder()">Add folder to root</button>
+<div class="app-wrap">
+  <button class="black-button root-button" (click)="showFolderInput = true">Add folder to root</button>
+  <app-tree [nodes]="nodes"></app-tree>
+  <app-input [type]="nodeType.Folder" *ngIf="showFolderInput" (cancel)="showFolderInput = false"></app-input>
   <pre class="nodes-as-json">{{ nodes | json }}</pre>
 </div>
-

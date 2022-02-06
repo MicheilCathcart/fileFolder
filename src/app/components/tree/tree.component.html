@@ -1,0 +1,11 @@
+<div class="tree">
+    <div *ngFor="let node of nodes">
+        <ng-container *ngIf="node?.type == 'folder'">
+            <app-folder-view [folder]="node"></app-folder-view>
+        </ng-container>
+        <ng-container *ngIf="node?.type == 'file'">
+            <app-file-view [file]="node"></app-file-view>
+        </ng-container>
+    </div>
+</div>
+  

@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { FileComponent } from './components/file/file.component';
-import { FolderComponent } from './components/folder/folder.component';
+import { FileViewComponent } from './components/file-view/file-view.component';
+import { FolderViewComponent } from './components/folder-view/folder-view.component';
+import { TreeComponent } from './components/tree/tree.component';
+import { InputSelectorComponent } from './components/input-selector/input-selector.component';
+import { InputComponent } from './components/input/input.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FileComponent,
-    FolderComponent
+    TreeComponent,
+    FileViewComponent,
+    FolderViewComponent,
+    InputSelectorComponent,
+    InputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

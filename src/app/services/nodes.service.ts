@@ -12,10 +12,37 @@ export class NodesService {
   constructor() { }
 
   /**
-   * Create a new folder at the root level
+   * Removes a node and it's children when deleted
+   * @param parent the nodes parent, 
+   * @param childId 
    */
-   addRootFolder() {
-    this.nodes.push(new FolderModel());
+   removeNode(node: NodeModel) {
+
+    let children = node.parent?.children || this.nodes;
+    let childIndex = children.findIndex(child => child.id === node.id);
+
+    if (childIndex > -1) {
+      let deletedChild: NodeModel[] = children.splice(childIndex, 1);
+
+      // Remove children
+      deletedChild[0].children = [];
+    }
+
+  }
+
+  /**
+   * Removes a node and it's children when deleted
+   * @param parent the nodes parent, 
+   * @param childId 
+   */
+   addNode<T extends NodeModel>(node: T) {
+
+    let children = node.parent?.children || this.nodes; 
+
+    if (parent) {
+      children.push(node);
+    }
+
   }
 
 }
