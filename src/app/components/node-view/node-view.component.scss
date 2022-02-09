@@ -1,5 +1,5 @@
 :host {
-    .folder-group {
+    .node-group {
         .tree-branch-wrap {
             display: flex;
             align-items: center;
@@ -14,7 +14,7 @@
                 width: 100%;
             }
         }
-        .folder-view-wrap {
+        .node-view-wrap {
             display: flex;
             padding: 10px;
             height: 20px;
@@ -33,7 +33,7 @@
                     align-items: center;
                 }
             }
-            .folder-name {
+            .node-name {
                 display: flex;
                 align-items: center;
             }

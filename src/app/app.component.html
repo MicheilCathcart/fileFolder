@@ -1,6 +1,6 @@
 <div class="app-wrap">
   <button class="black-button root-button" title="Add root folder"  aria-label="Add root folder" (click)="showFolderInput = true">Add folder to root</button>
-  <app-tree [nodes]="nodes"></app-tree>
-  <app-input [type]="nodeType.Folder" *ngIf="showFolderInput" (cancel)="showFolderInput = false"></app-input>
+  <app-tree [node]="rootNode"></app-tree>
+  <app-input [type]="nodeType.Folder" [node]="rootNode" *ngIf="showFolderInput" (cancel)="showFolderInput = false"></app-input>
   <pre class="nodes-as-json">{{ nodesTOJSON | json }}</pre>
 </div>

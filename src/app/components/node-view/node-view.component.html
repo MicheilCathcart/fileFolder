@@ -1,0 +1,20 @@
+<div class="node-group">
+    <div class="tree-branch-wrap">
+        <div class="tree-branch">
+            <div class="tree-branch-inner"></div>
+        </div>
+        <div class="node-view-wrap">
+            <div class="node-name">
+                <img *ngIf="node.type == nodeType.Folder" class="icon" alt="folder" src="/assets/folder-open-regular.svg" />
+                <img *ngIf="node.type == nodeType.File" class="icon" alt="folder" src="/assets/file-regular.svg" />
+                {{ node.name }}
+            </div>
+            <div class="hover-buttons">
+                <button *ngIf="node.type == nodeType.Folder" class="black-button small" title="Add file or folder"  aria-label="Add file or folder" (click)="showInputSelector = true"><img alt="Cancel" src="/assets/add.svg" /></button>
+                <button class="white-button small"  title="Delete folder"  aria-label="Delete folder" (click)="delete()"><img alt="Cancel" src="/assets/cross.svg" /></button>
+            </div>
+        </div>
+    </div>
+    <app-tree *ngIf="node.children.length > 0" [node]="node"></app-tree>
+    <app-input-selector *ngIf="showInputSelector" [node]="node" (close)="showInputSelector = false"></app-input-selector>
+</div>
