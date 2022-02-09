@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NodeModel, NodeType } from 'src/app/models/node.model';
 
 @Component({
@@ -6,20 +6,15 @@ import { NodeModel, NodeType } from 'src/app/models/node.model';
   templateUrl: './input-selector.component.html',
   styleUrls: ['./input-selector.component.scss']
 })
-export class InputSelectorComponent implements OnInit {
+export class InputSelectorComponent {
 
   @Input()
-  parent!: NodeModel;
+  node!: NodeModel;
 
   @Output() 
   close = new EventEmitter<boolean>();
 
   type!: NodeType;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   get nodeType() {
     return NodeType;

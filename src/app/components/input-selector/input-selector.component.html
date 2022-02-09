@@ -3,5 +3,5 @@
         <button title="Enter Folder Name"  aria-label="Enter Folder Name" class="white-button" (click)="showFolderInput()">Folder</button>
         <button title="Enter File Name"  aria-label="Enter File Name" class="white-button" (click)="showFileInput()">File</button>
     </div>
-    <app-input *ngIf="type" [parent]="parent" [type]="type" (cancel)="onClose()"></app-input>
+    <app-input *ngIf="type" [node]="node" [type]="type" (cancel)="onClose()"></app-input>
 </div>

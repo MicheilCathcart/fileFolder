@@ -15,5 +15,5 @@
         </div>
     </div>
     <app-tree *ngIf="folder.children.length > 0" [nodes]="folder.children"></app-tree>
-    <app-input-selector *ngIf="showInputSelector" [parent]="folder" (close)="showInputSelector = false"></app-input-selector>
+    <app-input-selector *ngIf="showInputSelector" [node]="folder" (close)="showInputSelector = false"></app-input-selector>
 </div>

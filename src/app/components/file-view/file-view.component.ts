@@ -1,24 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NodeModel } from 'src/app/models/node.model';
-import { NodesService } from 'src/app/services/nodes.service';
 
 @Component({
   selector: 'app-file-view',
   templateUrl: './file-view.component.html',
   styleUrls: ['./file-view.component.scss']
 })
-export class FileViewComponent implements OnInit {
+export class FileViewComponent {
 
   @Input()
   file!: NodeModel;
 
-  constructor(private nodeService: NodesService) { }
-
-  ngOnInit(): void {
-  }
-
   delete() {
-    this.nodeService.removeNode(this.file);
+    this.file.parent?.removeNode(this.file.id);
   }
 
 }
