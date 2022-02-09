@@ -9,6 +9,6 @@ import { NodeModel } from 'src/app/models/node.model';
 export class TreeComponent {
 
   @Input()
-  nodes!: NodeModel[];
+  node!: NodeModel;
 
 }
